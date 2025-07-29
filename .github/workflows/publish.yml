@@ -27,7 +27,7 @@ jobs:
                 images: ghcr.io/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}
                 tags: |
                     type=semver,pattern={{version}},value=v${{ inputs.version }}
-            - uses: docker/build-push-action@v5
+            - uses: docker/build-push-action@v6
               with:
                 push: true
                 context: docker/example
